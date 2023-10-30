@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<VBox xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.emsi.javafx.ListeController"
+      prefHeight="400.0" prefWidth="600.0">
+    <VBox alignment="CENTER" spacing="20" styleClass="blackBG">
+
+        <HBox spacing="20">
+            <Button text="Create" onAction="#create" prefWidth="100" />
+            <Button text="Read" onAction="#read" prefWidth="100" />
+            <Button text="Update" onAction="#update" prefWidth="100" />
+            <Button text="Delete" onAction="#delete" prefWidth="100" />
+            <Button text="Export" onAction="#exportData" prefWidth="100" />
+            <Button text="Import" onAction="#importData" prefWidth="100" />
+
+        </HBox>
+        <TableView fx:id="comptesTableView" styleClass="darkTB">
+            <columns>
+                <TableColumn text="code" prefWidth="80">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="code" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn text="titulaire" prefWidth="100">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="titulaire" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn text="dateCreation" prefWidth="100">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="dateCreation" />
+                    </cellValueFactory>
+                </TableColumn>
+                <TableColumn text="typeCompte" prefWidth="120">
+                    <cellValueFactory>
+                        <PropertyValueFactory property="typeCompte" />
+                    </cellValueFactory>
+                </TableColumn>
+            </columns>
+        </TableView>
+    </VBox>
+
+</VBox>
